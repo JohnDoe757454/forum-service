@@ -1,5 +1,5 @@
 package telran.java52.forum.dto;
 
-public class CommentDto {
+public class AddCommentDto {
 	String message;
 }

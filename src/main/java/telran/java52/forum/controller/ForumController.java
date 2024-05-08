@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
 import telran.java52.forum.dto.AddPostDto;
-import telran.java52.forum.dto.CommentDto;
+import telran.java52.forum.dto.AddCommentDto;
 import telran.java52.forum.dto.PeriodDto;
 import telran.java52.forum.dto.PostDto;
 import telran.java52.forum.service.ForumService;
@@ -45,9 +45,9 @@ public class ForumController {
 	}
 
 	@PutMapping("/forum/post/{postId}/comment/{user}")
-	public PostDto addComment(@RequestBody CommentDto commentDto, @PathVariable("postId") String id,
+	public PostDto addComment(@RequestBody AddCommentDto addCommentDto, @PathVariable("postId") String id,
 			@PathVariable String user) {
-		return forumService.addComment(commentDto, id, user);
+		return forumService.addComment(addCommentDto, id, user);
 	}
 
 	@DeleteMapping("/forum/post/{postId}")

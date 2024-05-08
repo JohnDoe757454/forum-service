@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import telran.java52.forum.dto.AddPostDto;
-import telran.java52.forum.dto.CommentDto;
+import telran.java52.forum.dto.AddCommentDto;
 import telran.java52.forum.dto.PostDto;
 import telran.java52.forum.dto.PeriodDto;
 
@@ -17,7 +17,7 @@ public interface ForumService {
 
 	List<PostDto> findPostsByAuthor(String author);
 
-	PostDto addComment(CommentDto commentDto,String id, String user);
+	PostDto addComment(AddCommentDto addCommentDto,String id, String user);
 
 	PostDto deletePost(String id);
 

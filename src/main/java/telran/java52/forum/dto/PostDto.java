@@ -1,6 +1,7 @@
 package telran.java52.forum.dto;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class PostDto {
 	String id;
@@ -10,5 +11,5 @@ public class PostDto {
 	LocalDateTime dateCreated;
 	String[] tags;
 	Integer likes;
-	String[] comments;
+	List<CommentDto> comments;
 }
